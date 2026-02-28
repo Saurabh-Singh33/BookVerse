@@ -1,0 +1,111 @@
+[
+  {
+    "id": "1",
+    "name": "Item 1",
+    "title": "Title 1",
+    "price": 10.99,
+    "category": "free",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 1"
+  },
+  {
+    "id": "2",
+    "name": "Item 2",
+    "title": "Title 2",
+    "price": 20.99,
+    "category": "paid",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 2"
+  },
+  {
+    "id": "3",
+    "name": "Item 3",
+    "title": "Title 3",
+    "price": 15.99,
+    "category": "free",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 3"
+  },  
+  {
+    "id": "4",
+    "name": "Item 4",
+    "title": "Title 4",
+    "price": 25.99,
+    "category": "paid",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 4"
+  },
+  {
+    "id": "4",
+    "name": "Item 4",
+    "title": "Title 4",
+    "price": 25.99,
+    "category": "paid",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 4"
+  },
+  {
+    "id": "4",
+    "name": "Item 4",
+    "title": "Title 4",
+    "price": 25.99,
+    "category": "paid",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 4"
+  },
+  {
+    "id": "5",
+    "name": "Item 5",
+    "title": "Title 5",
+    "price": 30.99,
+    "category": "paid",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 5"
+  },
+  {
+    "id": "6",
+    "name": "Item 6",
+    "title": "Title 6",
+    "price": 35.99,
+    "category": "paid",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 6"
+  },
+  {
+    "id": "7",
+    "name": "Item 7",
+    "title": "Title 7",
+    "price": 40.99,
+    "category": "paid",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 7"
+  },
+  {
+    "id": "8",
+    "name": "Item 8",
+    "title": "Title 8",
+    "price": 45.99,
+    "category": "paid",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 8"
+  },
+  {
+    "id": "9",
+    "name": "Item 9",
+    "title": "Title 9",
+    "price": 50.99,
+    "category": "paid",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 9"
+  },
+  {
+    "id": "10",
+    "name": "Item 10",
+    "title": "Title 10",
+    "price": 55.99,
+    "category": "paid",
+    "image": "https://via.placeholder.com/150",
+    "description": "Description for Item 10"
+  }
+  
+]
