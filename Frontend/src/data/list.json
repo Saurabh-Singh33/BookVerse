@@ -40,7 +40,7 @@
     "name": "Item 5",
     "title": "Title 5",
     "price": 30.99,
-    "category": "paid",
+    "category": "free",
     "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
     "description": "Description for Item 5"
   },
@@ -58,7 +58,7 @@
     "name": "Item 7",
     "title": "Title 7",
     "price": 40.99,
-    "category": "paid",
+    "category": "free",
     "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
     "description": "Description for Item 7"
   },
@@ -67,7 +67,7 @@
     "name": "Item 8",
     "title": "Title 8",
     "price": 45.99,
-    "category": "paid",
+    "category": "free",
     "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
     "description": "Description for Item 8"
   },
@@ -76,7 +76,7 @@
     "name": "Item 9",
     "title": "Title 9",
     "price": 40.99,
-    "category": "paid",
+    "category": "free",
     "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
     "description": "Description for Item 9"
   },

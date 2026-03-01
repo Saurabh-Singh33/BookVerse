@@ -6,4 +6,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+
+.dark .slick-prev:before,
+.dark .slick-next:before {
+  color: white !important;
+}
  
