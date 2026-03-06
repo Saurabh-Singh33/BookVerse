@@ -1,11 +1,19 @@
-const express = require('express');
+import express from "express";
+import dotenv from "dotenv";
+
+console.log("Server file executed");
+
+dotenv.config();
+
 const app = express();
+const PORT = process.env.PORT || 4000;
 
-const PORT = process.env.PORT || 4001;
-
-app.get('/', (req, res) => {
-  res.send('Hello World!,, This is the backend of BookVerse');
+app.get("/", (req, res) => {
+  res.send("Hello World!,, This is the backend of BookVerse");
 });
 
-app.listen(PORT, () => {  console.log(`Example app listening at http://localhost:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+}).on("error", (err) => {
+  console.log("Server error:", err.message);
 });
