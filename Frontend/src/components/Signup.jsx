@@ -41,9 +41,9 @@ function Signup() {
   return (
     <>
       <div className="flex h-screen items-center justify-center">
-        <div className=" w-[600px] ">
-          <div className="modal-box">
-            <form onSubmit={handleSubmit(onSubmit)} method="dialog">
+        <div className="w-[600px] max-w-full px-4">
+          <div className="border shadow-md rounded-2xl p-8 dark:bg-slate-800 dark:border-slate-700 w-full relative">
+            <form onSubmit={handleSubmit(onSubmit)}>
               {/* if there is a button in form, it will close the modal */}
               <Link
                 to="/"
@@ -119,13 +119,13 @@ function Signup() {
                   >
                     Login
                   </button>{" "}
-                  <Login />
                 </p>
               </div>
             </form>
           </div>
         </div>
       </div>
+      <Login />
     </>
   );
 }
