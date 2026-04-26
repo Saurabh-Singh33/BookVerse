@@ -6,6 +6,12 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+@layer base {
+  body {
+    @apply bg-white text-black dark:bg-slate-900 dark:text-white;
+  }
+}
+
 .slick-prev:before,
 .slick-next:before {
   color: black !important;
