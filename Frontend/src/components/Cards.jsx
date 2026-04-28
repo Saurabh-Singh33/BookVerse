@@ -23,7 +23,7 @@ function Cards({ item }) {
               <div className="px-3 py-1 font-semibold border rounded-full text-pink-500 dark:border-slate-700">${item.price}</div>
               <Link 
                 to={item.category === "paid" && !authUser ? "/signup" : `/read/${item._id || item.id}`}
-                state={{ from: window.location }}
+                state={{ from: window.location.pathname }}
                 className="cursor-pointer px-4 py-1.5 font-medium rounded-full border-2 border-pink-500 text-pink-500 hover:bg-gradient-to-r hover:from-pink-500 hover:to-fuchsia-600 hover:text-white hover:border-transparent hover:scale-105 active:scale-95 transition-all duration-300 shadow-sm hover:shadow-pink-500/40"
               >
                 {item.category === "paid" && !authUser ? "Buy Now" : "Read"}

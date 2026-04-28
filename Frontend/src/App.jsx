@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Home from "./home/Home";
 import Courses from "./courses/Courses";
@@ -12,6 +12,21 @@ import { useAuth } from "./context/AuthProvider";
 function App() {
   const [authUser, setAuthUser] = useAuth();
   console.log(authUser);
+
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    const element = document.documentElement;
+    if (theme === "dark") {
+      element.classList.add("dark");
+      element.setAttribute("data-theme", "dark");
+      document.body.classList.add("dark");
+    } else {
+      element.classList.remove("dark");
+      element.setAttribute("data-theme", "light");
+      document.body.classList.remove("dark");
+    }
+  }, []);
+
   return (
     <div className="min-h-screen dark:bg-slate-900 dark:text-white bg-white text-black">
       <Routes>
