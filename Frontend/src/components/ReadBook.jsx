@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import list from "../data/list.json";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import axios from "axios";
@@ -13,15 +12,7 @@ function ReadBook() {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        // First check local list
-        const localBook = list.find((item) => String(item.id) === String(id) || String(item._id) === String(id));
-        if (localBook) {
-          setBook(localBook);
-          setLoading(false);
-          return;
-        }
-
-        // If not found locally, fetch from backend
+        // Fetch from backend
         const res = await axios.get("http://localhost:4001/book");
         const foundBook = res.data.find((item) => String(item._id) === String(id) || String(item.id) === String(id));
         setBook(foundBook);

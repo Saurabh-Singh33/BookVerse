@@ -17,11 +17,15 @@ function Navbar() {
       element.setAttribute("data-theme", "dark");
       localStorage.setItem("theme", "dark");
       document.body.classList.add("dark");
+      element.style.filter = "brightness(0.85)";
+      element.style.transition = "filter 0.5s ease-in-out";
     } else {
       element.classList.remove("dark");
       element.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light");
       document.body.classList.remove("dark");
+      element.style.filter = "brightness(1)";
+      element.style.transition = "filter 0.5s ease-in-out";
     }
   }, [theme]);
 

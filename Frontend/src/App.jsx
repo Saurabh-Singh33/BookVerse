@@ -16,14 +16,17 @@ function App() {
   useEffect(() => {
     const theme = localStorage.getItem("theme");
     const element = document.documentElement;
+    element.style.transition = "filter 0.3s ease";
     if (theme === "dark") {
       element.classList.add("dark");
       element.setAttribute("data-theme", "dark");
       document.body.classList.add("dark");
+      element.style.filter = "brightness(0.85)";
     } else {
       element.classList.remove("dark");
       element.setAttribute("data-theme", "light");
       document.body.classList.remove("dark");
+      element.style.filter = "brightness(1)";
     }
   }, []);
 
