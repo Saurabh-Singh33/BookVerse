@@ -1,93 +1,102 @@
 [
   {
     "id": "1",
-    "name": "Item 1",
-    "title": "Title 1",
-    "price": 10.99,
+    "name": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "title": "A tale of wealth, love, and the American Dream",
+    "price": 0,
     "category": "free",
-    "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "description": "Description for Item 1"
+    "image": "https://covers.openlibrary.org/b/id/7222246-L.jpg",
+    "description": "Set in the Jazz Age on Long Island, the novel depicts narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan."
   },
   {
     "id": "2",
-    "name": "Item 2",
-    "title": "Title 2",
-    "price": 20.99,
+    "name": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "title": "A timeless classic of justice and moral growth",
+    "price": 12.99,
     "category": "paid",
-    "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "description": "Description for Item 2"
+    "image": "https://covers.openlibrary.org/b/id/8228691-L.jpg",
+    "description": "The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. Through the young eyes of Scout and Jem Finch, Harper Lee explores racial injustice and the destruction of innocence."
   },
   {
     "id": "3",
-    "name": "Item 3",
-    "title": "Title 3",
-    "price": 15.99,
+    "name": "1984",
+    "author": "George Orwell",
+    "title": "A dystopian vision of a totalitarian future",
+    "price": 0,
     "category": "free",
-    "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "description": "Description for Item 3"
-  },  
+    "image": "https://covers.openlibrary.org/b/id/7222085-L.jpg",
+    "description": "Among the seminal texts of the 20th century, Nineteen Eighty-Four is a rare work that grows more haunting as its dystopian proscriptions have become combated by combatants on both sides of the political spectrum."
+  },
   {
     "id": "4",
-    "name": "Item 4",
-    "title": "Title 4",
-    "price": 25.99,
+    "name": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "title": "A witty exploration of love and social standing",
+    "price": 14.99,
     "category": "paid",
-    "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "description": "Description for Item 4"
+    "image": "https://covers.openlibrary.org/b/id/12645114-L.jpg",
+    "description": "Since its immediate success in 1813, Pride and Prejudice has remained one of the most popular novels in the English language. It is a story of the Bennet sisters and their romantic entanglements."
   },
   {
     "id": "5",
-    "name": "Item 5",
-    "title": "Title 5",
-    "price": 30.99,
+    "name": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "title": "An unexpected journey through Middle-earth",
+    "price": 0,
     "category": "free",
-    "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "description": "Description for Item 5"
+    "image": "https://covers.openlibrary.org/b/id/14625829-L.jpg",
+    "description": "Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar. But his contentment is disturbed when the wizard Gandalf and thirteen dwarves arrive."
   },
   {
     "id": "6",
-    "name": "Item 6",
-    "title": "Title 6",
-    "price": 35.99,
+    "name": "Dune",
+    "author": "Frank Herbert",
+    "title": "An epic sci-fi saga of power and survival",
+    "price": 18.99,
     "category": "paid",
-    "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "description": "Description for Item 6"
+    "image": "https://covers.openlibrary.org/b/id/11153085-L.jpg",
+    "description": "Set on the desert planet Arrakis, Dune is the story of Paul Atreides, who would become the mysterious man known as Muad'Dib. He would avenge the traitorous plot against his noble family."
   },
   {
     "id": "7",
-    "name": "Item 7",
-    "title": "Title 7",
-    "price": 40.99,
+    "name": "Brave New World",
+    "author": "Aldous Huxley",
+    "title": "A prophetic vision of a pleasure-driven society",
+    "price": 0,
     "category": "free",
-    "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "description": "Description for Item 7"
+    "image": "https://covers.openlibrary.org/b/id/14845842-L.jpg",
+    "description": "Aldous Huxley's profoundly important classic of world literature, Brave New World is a searching vision of an unequal, technologically-advanced future where humans are genetically bred."
   },
   {
     "id": "8",
-    "name": "Item 8",
-    "title": "Title 8",
-    "price": 45.99,
+    "name": "The Alchemist",
+    "author": "Paulo Coelho",
+    "title": "A magical fable about following your dreams",
+    "price": 0,
     "category": "free",
-    "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "description": "Description for Item 8"
+    "image": "https://covers.openlibrary.org/b/id/11429754-L.jpg",
+    "description": "Paulo Coelho's masterwork tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different from what he imagined."
   },
   {
     "id": "9",
-    "name": "Item 9",
-    "title": "Title 9",
-    "price": 40.99,
+    "name": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "title": "A brief history of humankind",
+    "price": 0,
     "category": "free",
-    "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "description": "Description for Item 9"
+    "image": "https://covers.openlibrary.org/b/id/10520634-L.jpg",
+    "description": "From a renowned historian comes a groundbreaking narrative of humanity's creation and evolution that explores the ways in which biology and history have defined us and enhanced our understanding."
   },
   {
     "id": "10",
-    "name": "Item 10",
-    "title": "Title 10",
-    "price": 55.99,
+    "name": "The Art of War",
+    "author": "Sun Tzu",
+    "title": "Ancient wisdom on strategy and leadership",
+    "price": 22.99,
     "category": "paid",
-    "image": "https://tse2.mm.bing.net/th/id/OIP.YXBCkWO1DniEsPhfK56lzAHaGM?rs=1&pid=ImgDetMain&o=7&rm=3",
-    "description": "Description for Item 10"
+    "image": "https://covers.openlibrary.org/b/id/12838409-L.jpg",
+    "description": "The Art of War is an ancient Chinese military treatise dating from roughly 5th century BC. The work, which is attributed to the ancient Chinese military strategist Sun Tzu, is composed of 13 chapters."
   }
-  
 ]

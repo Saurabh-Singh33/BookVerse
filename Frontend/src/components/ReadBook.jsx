@@ -8,16 +8,17 @@ function ReadBook() {
   const { id } = useParams();
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        // Fetch from backend
-        const res = await axios.get("http://localhost:4001/book");
-        const foundBook = res.data.find((item) => String(item._id) === String(id) || String(item.id) === String(id));
-        setBook(foundBook);
-      } catch (error) {
-        console.error("Error fetching book:", error);
+        // Fetch single book by ID from backend
+        const res = await axios.get(`http://localhost:4001/book/${id}`);
+        setBook(res.data);
+      } catch (err) {
+        console.error("Error fetching book:", err);
+        setError(err.response?.data?.message || "Failed to load book");
       } finally {
         setLoading(false);
       }
@@ -33,11 +34,11 @@ function ReadBook() {
     );
   }
 
-  if (!book) {
+  if (error || !book) {
     return (
       <div className="h-screen flex items-center justify-center dark:bg-slate-900 dark:text-white">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Book not found</h2>
+          <h2 className="text-2xl font-bold mb-4">{error || "Book not found"}</h2>
           <Link to="/" className="text-pink-500 underline">Back to home</Link>
         </div>
       </div>
@@ -61,12 +62,19 @@ function ReadBook() {
               </div>
             </div>
             <div className="w-full md:w-2/3">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">{book.name}</h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">{book.name}</h1>
+              {book.author && (
+                <p className="text-lg text-pink-400 mb-4 font-medium">by {book.author}</p>
+              )}
               <h2 className="text-2xl text-gray-600 dark:text-gray-300 mb-6 font-medium">{book.title}</h2>
               <div className="flex flex-wrap items-center gap-4 mb-8">
                 <span className="badge bg-pink-500 text-white border-none shadow-md px-4 py-3 uppercase font-semibold tracking-wide">{book.category}</span>
                 <span className="text-3xl font-bold text-slate-800 dark:text-white flex items-center">
-                  <span className="text-pink-500 mr-1">$</span>{book.price}
+                  {book.price === 0 ? (
+                    <span className="text-green-500">Free</span>
+                  ) : (
+                    <><span className="text-pink-500 mr-1">$</span>{book.price}</>
+                  )}
                 </span>
               </div>
               <p className="text-lg leading-relaxed mb-8 text-gray-700 dark:text-gray-300 bg-slate-50 dark:bg-slate-900/50 p-6 rounded-2xl border-l-4 border-pink-500">
@@ -81,7 +89,7 @@ function ReadBook() {
               </h3>
               <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 space-y-6">
                 <p className="leading-relaxed">
-                  This is the premium content of <strong className="text-pink-500">{book.name}</strong>. Here you would find the full text, chapters, and immersive reading experience designed for our BookVerse community.
+                  This is the premium content of <strong className="text-pink-500">{book.name}</strong> by {book.author || "the author"}. Here you would find the full text, chapters, and immersive reading experience designed for our BookVerse community.
                 </p>
                 <p className="leading-relaxed">
                   Step into a world where words come alive. Every page of this book has been curated to provide you with the best insights and storytelling. Whether you're here for educational purposes or just to relax, we hope you find exactly what you're looking for.

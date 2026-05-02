@@ -18,9 +18,14 @@ function Cards({ item }) {
               {item.name}
               <div className="badge bg-pink-500 text-white border-none shadow-md">{item.category}</div>
             </h2>
+            {item.author && (
+              <p className="text-xs text-pink-400 font-medium -mt-1">by {item.author}</p>
+            )}
             <p className="text-sm text-gray-500 dark:text-gray-400">{item.title}</p>
             <div className="card-actions justify-between mt-4">
-              <div className="px-3 py-1 font-semibold border rounded-full text-pink-500 dark:border-slate-700">${item.price}</div>
+              <div className="px-3 py-1 font-semibold border rounded-full text-pink-500 dark:border-slate-700">
+                {item.price === 0 ? "Free" : `$${item.price}`}
+              </div>
               <Link 
                 to={item.category === "paid" && !authUser ? "/signup" : `/read/${item._id || item.id}`}
                 state={{ from: window.location.pathname }}

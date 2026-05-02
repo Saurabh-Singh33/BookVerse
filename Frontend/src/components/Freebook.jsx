@@ -64,16 +64,16 @@ function Freebook() {
         <div>
           <h1 className="font-semibold text-xl pb-2">Free Offered Courses</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Accusantium veritatis alias pariatur ad dolor repudiandae eligendi
-            corporis nulla non suscipit, iure neque earum?
+            Explore our curated collection of free books — from timeless classics
+            to modern masterpieces. Start reading today and unlock a world of
+            knowledge without spending a dime.
           </p>
         </div>
 
         <div>
           <Slider {...settings}>
             {book.map((item) => (
-              <Cards item={item} key={item.id} />
+              <Cards item={item} key={item._id || item.id} />
             ))}
           </Slider>
         </div>

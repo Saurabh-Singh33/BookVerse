@@ -12,9 +12,10 @@ function Banner() {
               <span className="text-pink-500">new everyday!!!</span>
             </h1>
             <p className="text-sm md:text-xl">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-              et totam. Tempora amet atque expedita, quae corrupti totam sed
-              pariatur corporis at veniam est voluptas animi!
+              Discover a vast collection of books spanning every genre and
+              interest. From timeless literary classics to cutting-edge
+              non-fiction, BookVerse brings the world's best reads right to your
+              fingertips — with many titles available completely free.
             </p>
             <label className="input input-bordered flex items-center gap-2">
               <svg
@@ -32,7 +33,7 @@ function Banner() {
           <button className="btn mt-6 btn-secondary">Get Started</button>
         </div>
         <div className=" order-1 w-full mt-20 md:w-1/2">
-          <img src={banner} className="w-52 md:w-96 md:ml-30" alt="" />
+          <img src={banner} className="w-52 md:w-96 md:ml-30" alt="BookVerse Banner" />
         </div>
       </div>
     </>
