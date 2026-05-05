@@ -59,26 +59,29 @@ function Freebook() {
     ],
   };
   return (
-    <>
-      <div className=" max-w-screen-2xl container mx-auto md:px-20 px-4">
-        <div>
-          <h1 className="font-semibold text-xl pb-2">Free Offered Courses</h1>
-          <p>
-            Explore our curated collection of free books — from timeless classics
-            to modern masterpieces. Start reading today and unlock a world of
-            knowledge without spending a dime.
-          </p>
+    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 my-20">
+      <div className="space-y-4 mb-10">
+        <div className="inline-block px-3 py-1 rounded-lg bg-green-500/10 text-green-600 font-bold text-xs uppercase tracking-widest">
+          Free Resources
         </div>
-
-        <div>
-          <Slider {...settings}>
-            {book.map((item) => (
-              <Cards item={item} key={item._id || item.id} />
-            ))}
-          </Slider>
-        </div>
+        <h1 className="font-bold text-3xl md:text-4xl dark:text-white">
+          Free Offered <span className="text-gradient">Courses</span>
+        </h1>
+        <p className="text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
+          Explore our curated collection of free books — from timeless classics
+          to modern masterpieces. Start reading today and unlock a world of
+          knowledge without spending a dime.
+        </p>
       </div>
-    </>
+
+      <div className="relative">
+        <Slider {...settings} className="pb-10">
+          {book.map((item) => (
+            <Cards item={item} key={item._id || item.id} />
+          ))}
+        </Slider>
+      </div>
+    </div>
   );
 }
 export default Freebook;
