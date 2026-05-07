@@ -16,8 +16,17 @@ function ReadBook() {
         // Fetch single book by ID from backend
         const res = await axios.get(`http://localhost:4001/book/${id}`);
         setBook(res.data);
+
+        // Record that user is reading this book
+        const authUser = JSON.parse(localStorage.getItem("Users"));
+        if (authUser && authUser._id) {
+          await axios.post("http://localhost:4001/user/read", {
+            userId: authUser._id,
+            bookId: id,
+          });
+        }
       } catch (err) {
-        console.error("Error fetching book:", err);
+        console.error("Error fetching book or recording activity:", err);
         setError(err.response?.data?.message || "Failed to load book");
       } finally {
         setLoading(false);
