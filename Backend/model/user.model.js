@@ -14,6 +14,12 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-});
+    readBooks: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Book",
+        },
+    ],
+}, { timestamps: true });
 const User = mongoose.model("User", userSchema);
 export default User;

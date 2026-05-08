@@ -1,4 +1,5 @@
 import User from "../model/user.model.js";
+import Book from "../model/book.model.js";
 import bcryptjs from "bcryptjs";
 export const signup = async(req, res) => {
     try {
@@ -47,6 +48,52 @@ export const login = async(req, res) => {
                 },
             });
         }
+    } catch (error) {
+        console.log("Error: " + error.message);
+        res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const addReadBook = async(req, res) => {
+    try {
+        const { userId, bookId } = req.body;
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Add bookId to readBooks if not already present
+        if (!user.readBooks.includes(bookId)) {
+            user.readBooks.push(bookId);
+            await user.save();
+        }
+
+        res.status(200).json({ message: "Book added to recently read" });
+    } catch (error) {
+        console.log("Error: " + error.message);
+        res.status(500).json({ message: "Internal server error" });
+    }
+};
+
+export const getUsersWithReadBooks = async(req, res) => {
+    try {
+        const users = await User.find()
+            .select("fullname email readBooks")
+            .populate({
+                path: "readBooks",
+                select: "name price category", // Get name and price (to check if paid)
+            });
+
+        // The user specifically asked for "1st 2 books he read"
+        // We can just slice it in the response or here.
+        const result = users.map((user) => ({
+            _id: user._id,
+            fullname: user.fullname,
+            email: user.email,
+            recentBooks: user.readBooks.slice(0, 2),
+        }));
+
+        res.status(200).json(result);
     } catch (error) {
         console.log("Error: " + error.message);
         res.status(500).json({ message: "Internal server error" });
