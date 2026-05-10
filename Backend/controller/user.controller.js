@@ -90,7 +90,7 @@ export const getUsersWithReadBooks = async(req, res) => {
             _id: user._id,
             fullname: user.fullname,
             email: user.email,
-            recentBooks: user.readBooks.slice(0, 2),
+            recentBooks: user.readBooks.slice(-2).reverse(),
         }));
 
         res.status(200).json(result);
